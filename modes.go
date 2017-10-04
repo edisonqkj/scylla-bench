@@ -353,9 +353,17 @@ func DoReadsFromTable(table string, session *gocql.Session, resultChannel chan R
 	} else if provideUpperBound {
 		request = fmt.Sprintf("SELECT * FROM %s.%s WHERE pk = ? AND ck >= ? AND ck < ?", keyspaceName, table)
 	} else if noLowerBound {
-		request = fmt.Sprintf("SELECT * FROM %s.%s WHERE pk = ? LIMIT %d", keyspaceName, table, rowsPerRequest)
+		//request = fmt.Sprintf("SELECT * FROM %s.%s WHERE pk = ? LIMIT %d", keyspaceName, table, rowsPerRequest)
+		request = fmt.Sprintf("SELECT * FROM %s.%s WHERE pk = ?", keyspaceName, table)
+                if !noCqlLimit {
+                   request = fmt.Sprintf("%s LIMIT %d",request,rowsPerRequest)
+                }
 	} else {
-		request = fmt.Sprintf("SELECT * FROM %s.%s WHERE pk = ? AND ck >= ? LIMIT %d", keyspaceName, table, rowsPerRequest)
+		//request = fmt.Sprintf("SELECT * FROM %s.%s WHERE pk = ? AND ck >= ? LIMIT %d", keyspaceName, table, rowsPerRequest)
+		request = fmt.Sprintf("SELECT * FROM %s.%s WHERE pk = ? AND ck >= ?", keyspaceName, table)
+                if !noCqlLimit {
+                   request = fmt.Sprintf("%s LIMIT %d",request,rowsPerRequest)
+                }
 	}
 	query := session.Query(request)
 

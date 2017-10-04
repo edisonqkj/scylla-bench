@@ -30,6 +30,7 @@ var rowsPerRequest int
 var provideUpperBound bool
 var inRestriction bool
 var noLowerBound bool
+var noCqlLimit bool
 
 var timeout time.Duration
 
@@ -134,9 +135,10 @@ func main() {
 	var replicationFactor int
 
 	var nodes string
-	var clientCompression bool
+	var disableClientCompression bool
 	var connectionCount int
 	var pageSize int
+        var protocolVersion int
 
 	var partitionOffset int64
 
@@ -147,10 +149,11 @@ func main() {
 	flag.StringVar(&workload, "workload", "", "workload: sequential, uniform, timeseries")
 	flag.StringVar(&consistencyLevel, "consistency-level", "quorum", "consistency level")
 	flag.IntVar(&replicationFactor, "replication-factor", 1, "replication factor")
+	flag.IntVar(&protocolVersion, "protocol-version", 4, "protocol version")
 	flag.DurationVar(&timeout, "timeout", 5*time.Second, "request timeout")
 
 	flag.StringVar(&nodes, "nodes", "127.0.0.1", "nodes")
-	flag.BoolVar(&clientCompression, "client-compression", true, "use compression for client-coordinator communication")
+	flag.BoolVar(&disableClientCompression, "no-client-compression", false, "disable compression for client-coordinator communication")
 	flag.IntVar(&concurrency, "concurrency", 16, "number of used goroutines")
 	flag.IntVar(&connectionCount, "connection-count", 4, "number of connections")
 	flag.IntVar(&maximumRate, "max-rate", 0, "the maximum rate of outbound requests in op/s (0 for unlimited)")
@@ -164,6 +167,7 @@ func main() {
 	flag.BoolVar(&provideUpperBound, "provide-upper-bound", false, "whether read requests should provide an upper bound")
 	flag.BoolVar(&inRestriction, "in-restriction", false, "use IN restriction in read requests")
 	flag.BoolVar(&noLowerBound, "no-lower-bound", false, "do not provide lower bound in read requests")
+	flag.BoolVar(&noCqlLimit, "no-cql-limit", false, "do not provide cql LIMIT in read requests")
 
 	flag.DurationVar(&testDuration, "duration", 0, "duration of the test in seconds (0 for unlimited)")
 
@@ -222,6 +226,7 @@ func main() {
 	}
 
 	cluster := gocql.NewCluster(strings.Split(nodes, ",")...)
+        cluster.ProtoVersion = protocolVersion
 	cluster.NumConns = connectionCount
 	cluster.PageSize = pageSize
 	cluster.Timeout = timeout
@@ -247,7 +252,7 @@ func main() {
 	default:
 		log.Fatal("unknown consistency level: ", consistencyLevel)
 	}
-	if clientCompression {
+	if !disableClientCompression {
 		cluster.Compressor = &gocql.SnappyCompressor{}
 	}
 
@@ -299,7 +304,7 @@ func main() {
 	} else {
 		fmt.Println("Maximum rate:\t\t unlimited")
 	}
-	fmt.Println("Client compression:\t", clientCompression)
+	fmt.Println("Disable client compression:\t", disableClientCompression)
 	if workload == "timeseries" {
 		fmt.Println("Start timestamp:\t", startTime.UnixNano())
 		fmt.Println("Write rate:\t\t", int64(maximumRate)/partitionCount)
