@@ -368,7 +368,7 @@ func DoReadsFromTable(table string, session *gocql.Session, resultChannel chan R
 	query := session.Query(request)
         keyspaceMetadata,nil := session.KeyspaceMetadata(keyspaceName)
         tableMetadata := keyspaceMetadata.Tables[table]
-        scanDestinations := len(tableMetadata.Columns) +  len(tableMetadata.PartitionKey)  + len(tableMetadata.ClusteringColumns)
+        scanDestinations := len(tableMetadata.Columns)// +  len(tableMetadata.PartitionKey)  + len(tableMetadata.ClusteringColumns)
 
 	RunTest(resultChannel, workload, rateLimiter, func(rb *ResultBuilder) (error, time.Duration) {
 		pk := workload.NextPartitionKey()
