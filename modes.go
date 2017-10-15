@@ -11,6 +11,454 @@ import (
 	"github.com/gocql/gocql"
 )
 
+type valueType10 struct {
+	v01     []byte    `cql:"v01"`
+	v02     []byte    `cql:"v02"`
+	v03     []byte    `cql:"v03"`
+	v04     []byte    `cql:"v04"`
+	v05     []byte    `cql:"v05"`
+	v06     []byte    `cql:"v06"`
+	v07     []byte    `cql:"v07"`
+	v08     []byte    `cql:"v08"`
+	v09     []byte    `cql:"v09"`
+	v10     []byte    `cql:"v10"`
+}
+
+type valueType20 struct {
+	v01     []byte    `cql:"v01"`
+	v02     []byte    `cql:"v02"`
+	v03     []byte    `cql:"v03"`
+	v04     []byte    `cql:"v04"`
+	v05     []byte    `cql:"v05"`
+	v06     []byte    `cql:"v06"`
+	v07     []byte    `cql:"v07"`
+	v08     []byte    `cql:"v08"`
+	v09     []byte    `cql:"v09"`
+	v10     []byte    `cql:"v10"`
+	v11     []byte    `cql:"v11"`
+	v12     []byte    `cql:"v12"`
+	v13     []byte    `cql:"v13"`
+	v14     []byte    `cql:"v14"`
+	v15     []byte    `cql:"v15"`
+	v16     []byte    `cql:"v16"`
+	v17     []byte    `cql:"v17"`
+	v18     []byte    `cql:"v18"`
+	v19     []byte    `cql:"v19"`
+	v20     []byte    `cql:"v20"`
+}
+
+type valueType30 struct {
+	v01     []byte    `cql:"v01"`
+	v02     []byte    `cql:"v02"`
+	v03     []byte    `cql:"v03"`
+	v04     []byte    `cql:"v04"`
+	v05     []byte    `cql:"v05"`
+	v06     []byte    `cql:"v06"`
+	v07     []byte    `cql:"v07"`
+	v08     []byte    `cql:"v08"`
+	v09     []byte    `cql:"v09"`
+	v10     []byte    `cql:"v10"`
+	v11     []byte    `cql:"v11"`
+	v12     []byte    `cql:"v12"`
+	v13     []byte    `cql:"v13"`
+	v14     []byte    `cql:"v14"`
+	v15     []byte    `cql:"v15"`
+	v16     []byte    `cql:"v16"`
+	v17     []byte    `cql:"v17"`
+	v18     []byte    `cql:"v18"`
+	v19     []byte    `cql:"v19"`
+	v20     []byte    `cql:"v20"`
+	v21     []byte    `cql:"v21"`
+	v22     []byte    `cql:"v22"`
+	v23     []byte    `cql:"v23"`
+	v24     []byte    `cql:"v24"`
+	v25     []byte    `cql:"v25"`
+	v26     []byte    `cql:"v26"`
+	v27     []byte    `cql:"v27"`
+	v28     []byte    `cql:"v28"`
+	v29     []byte    `cql:"v29"`
+	v30     []byte    `cql:"v30"`
+}
+
+type valueType40 struct {
+	v01     []byte    `cql:"v01"`
+	v02     []byte    `cql:"v02"`
+	v03     []byte    `cql:"v03"`
+	v04     []byte    `cql:"v04"`
+	v05     []byte    `cql:"v05"`
+	v06     []byte    `cql:"v06"`
+	v07     []byte    `cql:"v07"`
+	v08     []byte    `cql:"v08"`
+	v09     []byte    `cql:"v09"`
+	v10     []byte    `cql:"v10"`
+	v11     []byte    `cql:"v11"`
+	v12     []byte    `cql:"v12"`
+	v13     []byte    `cql:"v13"`
+	v14     []byte    `cql:"v14"`
+	v15     []byte    `cql:"v15"`
+	v16     []byte    `cql:"v16"`
+	v17     []byte    `cql:"v17"`
+	v18     []byte    `cql:"v18"`
+	v19     []byte    `cql:"v19"`
+	v20     []byte    `cql:"v20"`
+	v21     []byte    `cql:"v21"`
+	v22     []byte    `cql:"v22"`
+	v23     []byte    `cql:"v23"`
+	v24     []byte    `cql:"v24"`
+	v25     []byte    `cql:"v25"`
+	v26     []byte    `cql:"v26"`
+	v27     []byte    `cql:"v27"`
+	v28     []byte    `cql:"v28"`
+	v29     []byte    `cql:"v29"`
+	v30     []byte    `cql:"v30"`
+	v31     []byte    `cql:"v31"`
+	v32     []byte    `cql:"v32"`
+	v33     []byte    `cql:"v33"`
+	v34     []byte    `cql:"v34"`
+	v35     []byte    `cql:"v35"`
+	v36     []byte    `cql:"v36"`
+	v37     []byte    `cql:"v37"`
+	v38     []byte    `cql:"v38"`
+	v39     []byte    `cql:"v39"`
+	v40     []byte    `cql:"v40"`
+}
+
+type valueType50 struct {
+	v01     []byte    `cql:"v01"`
+	v02     []byte    `cql:"v02"`
+	v03     []byte    `cql:"v03"`
+	v04     []byte    `cql:"v04"`
+	v05     []byte    `cql:"v05"`
+	v06     []byte    `cql:"v06"`
+	v07     []byte    `cql:"v07"`
+	v08     []byte    `cql:"v08"`
+	v09     []byte    `cql:"v09"`
+	v10     []byte    `cql:"v10"`
+	v11     []byte    `cql:"v11"`
+	v12     []byte    `cql:"v12"`
+	v13     []byte    `cql:"v13"`
+	v14     []byte    `cql:"v14"`
+	v15     []byte    `cql:"v15"`
+	v16     []byte    `cql:"v16"`
+	v17     []byte    `cql:"v17"`
+	v18     []byte    `cql:"v18"`
+	v19     []byte    `cql:"v19"`
+	v20     []byte    `cql:"v20"`
+	v21     []byte    `cql:"v21"`
+	v22     []byte    `cql:"v22"`
+	v23     []byte    `cql:"v23"`
+	v24     []byte    `cql:"v24"`
+	v25     []byte    `cql:"v25"`
+	v26     []byte    `cql:"v26"`
+	v27     []byte    `cql:"v27"`
+	v28     []byte    `cql:"v28"`
+	v29     []byte    `cql:"v29"`
+	v30     []byte    `cql:"v30"`
+	v31     []byte    `cql:"v31"`
+	v32     []byte    `cql:"v32"`
+	v33     []byte    `cql:"v33"`
+	v34     []byte    `cql:"v34"`
+	v35     []byte    `cql:"v35"`
+	v36     []byte    `cql:"v36"`
+	v37     []byte    `cql:"v37"`
+	v38     []byte    `cql:"v38"`
+	v39     []byte    `cql:"v39"`
+	v40     []byte    `cql:"v40"`
+	v41     []byte    `cql:"v41"`
+	v42     []byte    `cql:"v42"`
+	v43     []byte    `cql:"v43"`
+	v44     []byte    `cql:"v44"`
+	v45     []byte    `cql:"v45"`
+	v46     []byte    `cql:"v46"`
+	v47     []byte    `cql:"v47"`
+	v48     []byte    `cql:"v48"`
+	v49     []byte    `cql:"v49"`
+	v50     []byte    `cql:"v50"`
+}
+
+func (v valueType10) MarshalUDT(name string, info gocql.TypeInfo) ([]byte, error) {
+	switch name {
+	case "v01":
+		return gocql.Marshal(info, v.v01)
+	case "v02":
+		return gocql.Marshal(info, v.v02)
+	case "v03":
+		return gocql.Marshal(info, v.v03)
+	case "v04":
+		return gocql.Marshal(info, v.v04)
+	case "v05":
+		return gocql.Marshal(info, v.v05)
+	case "v06":
+		return gocql.Marshal(info, v.v06)
+	case "v07":
+		return gocql.Marshal(info, v.v07)
+	case "v08":
+		return gocql.Marshal(info, v.v08)
+	case "v09":
+		return gocql.Marshal(info, v.v09)
+	case "v10":
+		return gocql.Marshal(info, v.v10)
+	default:
+		return nil, fmt.Errorf("unknown column for valueType10: %q", name)
+	}
+}
+
+func (v *valueType10) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte) error {
+	switch name {
+	case "v01":
+		return gocql.Unmarshal(info, data, &v.v01)
+	case "v02":
+		return gocql.Unmarshal(info, data, &v.v02)
+	case "v03":
+		return gocql.Unmarshal(info, data, &v.v03)
+	case "v04":
+		return gocql.Unmarshal(info, data, &v.v04)
+	case "v05":
+		return gocql.Unmarshal(info, data, &v.v05)
+	case "v06":
+		return gocql.Unmarshal(info, data, &v.v06)
+	case "v07":
+		return gocql.Unmarshal(info, data, &v.v07)
+	case "v08":
+		return gocql.Unmarshal(info, data, &v.v08)
+	case "v09":
+		return gocql.Unmarshal(info, data, &v.v09)
+	case "v10":
+		return gocql.Unmarshal(info, data, &v.v10)
+	default:
+		return fmt.Errorf("unknown column for valueType10: %q", name)
+	}
+}
+
+func (v valueType20) MarshalUDT(name string, info gocql.TypeInfo) ([]byte, error) {
+	switch name {
+	case "v01":
+		return gocql.Marshal(info, v.v01)
+	case "v02":
+		return gocql.Marshal(info, v.v02)
+	case "v03":
+		return gocql.Marshal(info, v.v03)
+	case "v04":
+		return gocql.Marshal(info, v.v04)
+	case "v05":
+		return gocql.Marshal(info, v.v05)
+	case "v06":
+		return gocql.Marshal(info, v.v06)
+	case "v07":
+		return gocql.Marshal(info, v.v07)
+	case "v08":
+		return gocql.Marshal(info, v.v08)
+	case "v09":
+		return gocql.Marshal(info, v.v09)
+	case "v10":
+		return gocql.Marshal(info, v.v10)
+	case "v11":
+		return gocql.Marshal(info, v.v11)
+	case "v12":
+		return gocql.Marshal(info, v.v12)
+	case "v13":
+		return gocql.Marshal(info, v.v13)
+	case "v14":
+		return gocql.Marshal(info, v.v14)
+	case "v15":
+		return gocql.Marshal(info, v.v15)
+	case "v16":
+		return gocql.Marshal(info, v.v16)
+	case "v17":
+		return gocql.Marshal(info, v.v17)
+	case "v18":
+		return gocql.Marshal(info, v.v18)
+	case "v19":
+		return gocql.Marshal(info, v.v19)
+	case "v20":
+		return gocql.Marshal(info, v.v20)
+	default:
+		return nil, fmt.Errorf("unknown column for valueType10: %q", name)
+	}
+}
+
+func (v *valueType20) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte) error {
+	switch name {
+	case "v01":
+		return gocql.Unmarshal(info, data, &v.v01)
+	case "v02":
+		return gocql.Unmarshal(info, data, &v.v02)
+	case "v03":
+		return gocql.Unmarshal(info, data, &v.v03)
+	case "v04":
+		return gocql.Unmarshal(info, data, &v.v04)
+	case "v05":
+		return gocql.Unmarshal(info, data, &v.v05)
+	case "v06":
+		return gocql.Unmarshal(info, data, &v.v06)
+	case "v07":
+		return gocql.Unmarshal(info, data, &v.v07)
+	case "v08":
+		return gocql.Unmarshal(info, data, &v.v08)
+	case "v09":
+		return gocql.Unmarshal(info, data, &v.v09)
+	case "v10":
+		return gocql.Unmarshal(info, data, &v.v10)
+	case "v11":
+		return gocql.Unmarshal(info, data, &v.v11)
+	case "v12":
+		return gocql.Unmarshal(info, data, &v.v12)
+	case "v13":
+		return gocql.Unmarshal(info, data, &v.v13)
+	case "v14":
+		return gocql.Unmarshal(info, data, &v.v14)
+	case "v15":
+		return gocql.Unmarshal(info, data, &v.v15)
+	case "v16":
+		return gocql.Unmarshal(info, data, &v.v16)
+	case "v17":
+		return gocql.Unmarshal(info, data, &v.v17)
+	case "v18":
+		return gocql.Unmarshal(info, data, &v.v18)
+	case "v19":
+		return gocql.Unmarshal(info, data, &v.v19)
+	case "v20":
+		return gocql.Unmarshal(info, data, &v.v20)
+	default:
+		return fmt.Errorf("unknown column for valueType10: %q", name)
+	}
+}
+
+
+func (v valueType30) MarshalUDT(name string, info gocql.TypeInfo) ([]byte, error) {
+	switch name {
+	case "v01":
+		return gocql.Marshal(info, v.v01)
+	case "v02":
+		return gocql.Marshal(info, v.v02)
+	case "v03":
+		return gocql.Marshal(info, v.v03)
+	case "v04":
+		return gocql.Marshal(info, v.v04)
+	case "v05":
+		return gocql.Marshal(info, v.v05)
+	case "v06":
+		return gocql.Marshal(info, v.v06)
+	case "v07":
+		return gocql.Marshal(info, v.v07)
+	case "v08":
+		return gocql.Marshal(info, v.v08)
+	case "v09":
+		return gocql.Marshal(info, v.v09)
+	case "v10":
+		return gocql.Marshal(info, v.v10)
+	case "v11":
+		return gocql.Marshal(info, v.v11)
+	case "v12":
+		return gocql.Marshal(info, v.v12)
+	case "v13":
+		return gocql.Marshal(info, v.v13)
+	case "v14":
+		return gocql.Marshal(info, v.v14)
+	case "v15":
+		return gocql.Marshal(info, v.v15)
+	case "v16":
+		return gocql.Marshal(info, v.v16)
+	case "v17":
+		return gocql.Marshal(info, v.v17)
+	case "v18":
+		return gocql.Marshal(info, v.v18)
+	case "v19":
+		return gocql.Marshal(info, v.v19)
+	case "v20":
+		return gocql.Marshal(info, v.v20)
+	case "v21":
+		return gocql.Marshal(info, v.v21)
+	case "v22":
+		return gocql.Marshal(info, v.v22)
+	case "v23":
+		return gocql.Marshal(info, v.v23)
+	case "v24":
+		return gocql.Marshal(info, v.v24)
+	case "v25":
+		return gocql.Marshal(info, v.v25)
+	case "v26":
+		return gocql.Marshal(info, v.v26)
+	case "v27":
+		return gocql.Marshal(info, v.v27)
+	case "v28":
+		return gocql.Marshal(info, v.v28)
+	case "v29":
+		return gocql.Marshal(info, v.v29)
+	case "v30":
+		return gocql.Marshal(info, v.v30)
+	default:
+		return nil, fmt.Errorf("unknown column for valueType10: %q", name)
+	}
+}
+
+func (v *valueType30) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte) error {
+	switch name {
+	case "v01":
+		return gocql.Unmarshal(info, data, &v.v01)
+	case "v02":
+		return gocql.Unmarshal(info, data, &v.v02)
+	case "v03":
+		return gocql.Unmarshal(info, data, &v.v03)
+	case "v04":
+		return gocql.Unmarshal(info, data, &v.v04)
+	case "v05":
+		return gocql.Unmarshal(info, data, &v.v05)
+	case "v06":
+		return gocql.Unmarshal(info, data, &v.v06)
+	case "v07":
+		return gocql.Unmarshal(info, data, &v.v07)
+	case "v08":
+		return gocql.Unmarshal(info, data, &v.v08)
+	case "v09":
+		return gocql.Unmarshal(info, data, &v.v09)
+	case "v10":
+		return gocql.Unmarshal(info, data, &v.v10)
+	case "v11":
+		return gocql.Unmarshal(info, data, &v.v11)
+	case "v12":
+		return gocql.Unmarshal(info, data, &v.v12)
+	case "v13":
+		return gocql.Unmarshal(info, data, &v.v13)
+	case "v14":
+		return gocql.Unmarshal(info, data, &v.v14)
+	case "v15":
+		return gocql.Unmarshal(info, data, &v.v15)
+	case "v16":
+		return gocql.Unmarshal(info, data, &v.v16)
+	case "v17":
+		return gocql.Unmarshal(info, data, &v.v17)
+	case "v18":
+		return gocql.Unmarshal(info, data, &v.v18)
+	case "v19":
+		return gocql.Unmarshal(info, data, &v.v19)
+	case "v20":
+		return gocql.Unmarshal(info, data, &v.v20)
+	case "v21":
+		return gocql.Unmarshal(info, data, &v.v21)
+	case "v22":
+		return gocql.Unmarshal(info, data, &v.v22)
+	case "v23":
+		return gocql.Unmarshal(info, data, &v.v23)
+	case "v24":
+		return gocql.Unmarshal(info, data, &v.v24)
+	case "v25":
+		return gocql.Unmarshal(info, data, &v.v25)
+	case "v26":
+		return gocql.Unmarshal(info, data, &v.v26)
+	case "v27":
+		return gocql.Unmarshal(info, data, &v.v27)
+	case "v28":
+		return gocql.Unmarshal(info, data, &v.v28)
+	case "v29":
+		return gocql.Unmarshal(info, data, &v.v29)
+	case "v30":
+		return gocql.Unmarshal(info, data, &v.v30)
+	default:
+		return fmt.Errorf("unknown column for valueType10: %q", name)
+	}
+}
+
 type RateLimiter interface {
 	Wait()
 	ExpectedInterval() int64
@@ -257,14 +705,68 @@ func RunTest(resultChannel chan Result, workload WorkloadGenerator, rateLimiter 
 	resultChannel <- *rb.FullResult
 }
 
+func getWriteQuery() string{
+   columnNames := "pk,ck"
+   columnArgs := "?,?"
+   for i:=0; i < clusteringColumnCount; i++ {
+       columnNames = fmt.Sprintf("%s, v%02d",columnNames,i)
+       columnArgs = fmt.Sprintf("%s, ?",columnArgs)
+   }
+   return fmt.Sprintf("INSERT INTO %s.%s (%s) VALUES (%s)", keyspaceName, tableName,columnNames,columnArgs)
+}
 func DoWrites(session *gocql.Session, resultChannel chan Result, workload WorkloadGenerator, rateLimiter RateLimiter) {
 	value := make([]byte, clusteringRowSize)
-	query := session.Query("INSERT INTO " + keyspaceName + "." + tableName + " (pk, ck, v) VALUES (?, ?, ?)")
+        values := make([]interface{}, clusteringColumnCount+2);
+        for i:=2; i < len(values); i++ {
+            values[i] = value;
+        }
+// 	query := session.Query("INSERT INTO " + keyspaceName + "." + tableName + " (pk, ck, v) VALUES (?, ?, ?)")
+        query := session.Query(getWriteQuery())
 
 	RunTest(resultChannel, workload, rateLimiter, func(rb *ResultBuilder) (error, time.Duration) {
 		pk := workload.NextPartitionKey()
 		ck := workload.NextClusteringKey()
-		bound := query.Bind(pk, ck, value)
+                values[0]=pk;
+                values[1]=ck;
+		//bound := query.Bind(pk, ck, value)
+		bound := query.Bind(values...)
+
+		requestStart := time.Now()
+		err := bound.Exec()
+		requestEnd := time.Now()
+		if err != nil {
+			return err, time.Duration(0)
+		}
+
+		rb.IncOps()
+		rb.IncRows()
+
+		latency := requestEnd.Sub(requestStart)
+		return nil, latency
+	})
+}
+
+func DoWritesUDT(session *gocql.Session, resultChannel chan Result, workload WorkloadGenerator, rateLimiter RateLimiter) {
+	value := make([]byte, clusteringRowSize)
+	query := session.Query("INSERT INTO " + keyspaceName + "." + tableName + " (pk, ck, v) VALUES (?, ?, ?)")
+        var valueType interface{}
+        if (clusteringColumnCount == 10) {
+           valueType = &valueType10{value,value,value,value,value,value,value,value,value,value}
+        }
+        if (clusteringColumnCount == 20) {
+           valueType = &valueType20{value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value}
+        }
+        if (clusteringColumnCount == 30) {
+           valueType = &valueType30{value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value}
+        }
+
+	RunTest(resultChannel, workload, rateLimiter, func(rb *ResultBuilder) (error, time.Duration) {
+		pk := workload.NextPartitionKey()
+		ck := workload.NextClusteringKey()
+		bound := query.Bind(pk, ck, valueType);
 
 		requestStart := time.Now()
 		err := bound.Exec()
@@ -368,7 +870,8 @@ func DoReadsFromTable(table string, session *gocql.Session, resultChannel chan R
 	query := session.Query(request)
         keyspaceMetadata,nil := session.KeyspaceMetadata(keyspaceName)
         tableMetadata := keyspaceMetadata.Tables[table]
-        scanDestinations := len(tableMetadata.Columns)// +  len(tableMetadata.PartitionKey)  + len(tableMetadata.ClusteringColumns)
+        scanDestinationsCount := len(tableMetadata.Columns)// +  len(tableMetadata.PartitionKey)  + len(tableMetadata.ClusteringColumns)
+        scanDestinations := make([]interface{}, scanDestinationsCount)
 
 	RunTest(resultChannel, workload, rateLimiter, func(rb *ResultBuilder) (error, time.Duration) {
 		pk := workload.NextPartitionKey()
@@ -399,16 +902,9 @@ func DoReadsFromTable(table string, session *gocql.Session, resultChannel chan R
 		requestStart := time.Now()
 		iter := bound.Iter()
 		if table == tableName {
-                        if (scanDestinations == 3) {
-				for iter.Scan(nil, nil, nil) {
-					rb.IncRows()
-				}
-                        }
-                        if (scanDestinations == 4) {
-				for iter.Scan(nil, nil, nil, nil) {
-					rb.IncRows()
-				}
-                        }
+			for iter.Scan(scanDestinations...) {
+				rb.IncRows()
+			}
 		} else {
 			for iter.Scan(nil, nil, nil, nil, nil, nil, nil) {
 				rb.IncRows()

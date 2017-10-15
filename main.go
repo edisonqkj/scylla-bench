@@ -25,6 +25,7 @@ var testDuration time.Duration
 var partitionCount int64
 var clusteringRowCount int64
 var clusteringRowSize int64
+var clusteringColumnCount int
 
 var rowsPerRequest int
 var provideUpperBound bool
@@ -47,7 +48,7 @@ func PrepareDatabase(session *gocql.Session, replicationFactor int) {
 		log.Fatal(err)
 	}
 
-	err = session.Query("CREATE TABLE IF NOT EXISTS " + keyspaceName + "." + tableName + " (pk bigint, ck bigint, v blob, PRIMARY KEY(pk, ck)) WITH compression = { }").Exec()
+	err = session.Query("CREATE TABLE IF NOT EXISTS " + keyspaceName + "." + tableName + " (pk bigint, ck bigint, v00 blob, PRIMARY KEY(pk, ck)) WITH compression = { }").Exec()
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -93,6 +94,8 @@ func GetMode(name string) func(session *gocql.Session, resultChannel chan Result
 			return DoWrites
 		}
 		return DoBatchedWrites
+        case "writeUDT":
+             return DoWritesUDT
 	case "counter_update":
 		return DoCounterUpdates
 	case "read":
@@ -145,7 +148,7 @@ func main() {
 	var writeRate int64
 	var distribution string
 
-	flag.StringVar(&mode, "mode", "", "operating mode: write, read, counter_update, counter_read")
+	flag.StringVar(&mode, "mode", "", "operating mode: write, writeUDT, read, counter_update, counter_read")
 	flag.StringVar(&workload, "workload", "", "workload: sequential, uniform, timeseries")
 	flag.StringVar(&consistencyLevel, "consistency-level", "quorum", "consistency level")
 	flag.IntVar(&replicationFactor, "replication-factor", 1, "replication factor")
@@ -162,6 +165,7 @@ func main() {
 	flag.Int64Var(&partitionCount, "partition-count", 10000, "number of partitions")
 	flag.Int64Var(&clusteringRowCount, "clustering-row-count", 100, "number of clustering rows in a partition")
 	flag.Int64Var(&clusteringRowSize, "clustering-row-size", 4, "size of a single clustering row")
+	flag.IntVar(&clusteringColumnCount, "clustering-column-count", 1, "number of columns in each row")
 
 	flag.IntVar(&rowsPerRequest, "rows-per-request", 1, "clustering rows per single request")
 	flag.BoolVar(&provideUpperBound, "provide-upper-bound", false, "whether read requests should provide an upper bound")
