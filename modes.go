@@ -1151,6 +1151,19 @@ func DoWritesUDT(session *gocql.Session, resultChannel chan Result, workload Wor
                                     value,value,value,value,value,value,value,value,value,value,
                                     value,value,value,value,value,value,value,value,value,value}
         }
+        if (clusteringColumnCount == 40) {
+           valueType = &valueType40{value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value}
+        }
+        if (clusteringColumnCount == 50) {
+           valueType = &valueType50{value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value,
+                                    value,value,value,value,value,value,value,value,value,value}
+        }
 
 	RunTest(resultChannel, workload, rateLimiter, func(rb *ResultBuilder) (error, time.Duration) {
 		pk := workload.NextPartitionKey()
