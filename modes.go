@@ -455,9 +455,398 @@ func (v *valueType30) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte
 	case "v30":
 		return gocql.Unmarshal(info, data, &v.v30)
 	default:
-		return fmt.Errorf("unknown column for valueType10: %q", name)
+		return fmt.Errorf("unknown column for valueType30: %q", name)
 	}
 }
+
+func (v valueType40) MarshalUDT(name string, info gocql.TypeInfo) ([]byte, error) {
+	switch name {
+	case "v01":
+		return gocql.Marshal(info, v.v01)
+	case "v02":
+		return gocql.Marshal(info, v.v02)
+	case "v03":
+		return gocql.Marshal(info, v.v03)
+	case "v04":
+		return gocql.Marshal(info, v.v04)
+	case "v05":
+		return gocql.Marshal(info, v.v05)
+	case "v06":
+		return gocql.Marshal(info, v.v06)
+	case "v07":
+		return gocql.Marshal(info, v.v07)
+	case "v08":
+		return gocql.Marshal(info, v.v08)
+	case "v09":
+		return gocql.Marshal(info, v.v09)
+	case "v10":
+		return gocql.Marshal(info, v.v10)
+	case "v11":
+		return gocql.Marshal(info, v.v11)
+	case "v12":
+		return gocql.Marshal(info, v.v12)
+	case "v13":
+		return gocql.Marshal(info, v.v13)
+	case "v14":
+		return gocql.Marshal(info, v.v14)
+	case "v15":
+		return gocql.Marshal(info, v.v15)
+	case "v16":
+		return gocql.Marshal(info, v.v16)
+	case "v17":
+		return gocql.Marshal(info, v.v17)
+	case "v18":
+		return gocql.Marshal(info, v.v18)
+	case "v19":
+		return gocql.Marshal(info, v.v19)
+	case "v20":
+		return gocql.Marshal(info, v.v20)
+	case "v21":
+		return gocql.Marshal(info, v.v21)
+	case "v22":
+		return gocql.Marshal(info, v.v22)
+	case "v23":
+		return gocql.Marshal(info, v.v23)
+	case "v24":
+		return gocql.Marshal(info, v.v24)
+	case "v25":
+		return gocql.Marshal(info, v.v25)
+	case "v26":
+		return gocql.Marshal(info, v.v26)
+	case "v27":
+		return gocql.Marshal(info, v.v27)
+	case "v28":
+		return gocql.Marshal(info, v.v28)
+	case "v29":
+		return gocql.Marshal(info, v.v29)
+	case "v30":
+		return gocql.Marshal(info, v.v30)
+	case "v31":
+		return gocql.Marshal(info, v.v31)
+	case "v32":
+		return gocql.Marshal(info, v.v32)
+	case "v33":
+		return gocql.Marshal(info, v.v33)
+	case "v34":
+		return gocql.Marshal(info, v.v34)
+	case "v35":
+		return gocql.Marshal(info, v.v35)
+	case "v36":
+		return gocql.Marshal(info, v.v36)
+	case "v37":
+		return gocql.Marshal(info, v.v37)
+	case "v38":
+		return gocql.Marshal(info, v.v38)
+	case "v39":
+		return gocql.Marshal(info, v.v39)
+	case "v40":
+		return gocql.Marshal(info, v.v40)
+	default:
+		return nil, fmt.Errorf("unknown column for valueType40: %q", name)
+	}
+}
+
+func (v *valueType40) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte) error {
+	switch name {
+	case "v01":
+		return gocql.Unmarshal(info, data, &v.v01)
+	case "v02":
+		return gocql.Unmarshal(info, data, &v.v02)
+	case "v03":
+		return gocql.Unmarshal(info, data, &v.v03)
+	case "v04":
+		return gocql.Unmarshal(info, data, &v.v04)
+	case "v05":
+		return gocql.Unmarshal(info, data, &v.v05)
+	case "v06":
+		return gocql.Unmarshal(info, data, &v.v06)
+	case "v07":
+		return gocql.Unmarshal(info, data, &v.v07)
+	case "v08":
+		return gocql.Unmarshal(info, data, &v.v08)
+	case "v09":
+		return gocql.Unmarshal(info, data, &v.v09)
+	case "v10":
+		return gocql.Unmarshal(info, data, &v.v10)
+	case "v11":
+		return gocql.Unmarshal(info, data, &v.v11)
+	case "v12":
+		return gocql.Unmarshal(info, data, &v.v12)
+	case "v13":
+		return gocql.Unmarshal(info, data, &v.v13)
+	case "v14":
+		return gocql.Unmarshal(info, data, &v.v14)
+	case "v15":
+		return gocql.Unmarshal(info, data, &v.v15)
+	case "v16":
+		return gocql.Unmarshal(info, data, &v.v16)
+	case "v17":
+		return gocql.Unmarshal(info, data, &v.v17)
+	case "v18":
+		return gocql.Unmarshal(info, data, &v.v18)
+	case "v19":
+		return gocql.Unmarshal(info, data, &v.v19)
+	case "v20":
+		return gocql.Unmarshal(info, data, &v.v20)
+	case "v21":
+		return gocql.Unmarshal(info, data, &v.v21)
+	case "v22":
+		return gocql.Unmarshal(info, data, &v.v22)
+	case "v23":
+		return gocql.Unmarshal(info, data, &v.v23)
+	case "v24":
+		return gocql.Unmarshal(info, data, &v.v24)
+	case "v25":
+		return gocql.Unmarshal(info, data, &v.v25)
+	case "v26":
+		return gocql.Unmarshal(info, data, &v.v26)
+	case "v27":
+		return gocql.Unmarshal(info, data, &v.v27)
+	case "v28":
+		return gocql.Unmarshal(info, data, &v.v28)
+	case "v29":
+		return gocql.Unmarshal(info, data, &v.v29)
+	case "v30":
+		return gocql.Unmarshal(info, data, &v.v30)
+	case "v31":
+		return gocql.Unmarshal(info, data, &v.v31)
+	case "v32":
+		return gocql.Unmarshal(info, data, &v.v32)
+	case "v33":
+		return gocql.Unmarshal(info, data, &v.v33)
+	case "v34":
+		return gocql.Unmarshal(info, data, &v.v34)
+	case "v35":
+		return gocql.Unmarshal(info, data, &v.v35)
+	case "v36":
+		return gocql.Unmarshal(info, data, &v.v36)
+	case "v37":
+		return gocql.Unmarshal(info, data, &v.v37)
+	case "v38":
+		return gocql.Unmarshal(info, data, &v.v38)
+	case "v39":
+		return gocql.Unmarshal(info, data, &v.v39)
+	case "v40":
+		return gocql.Unmarshal(info, data, &v.v40)
+	default:
+		return fmt.Errorf("unknown column for valueType40: %q", name)
+	}
+}
+
+func (v valueType50) MarshalUDT(name string, info gocql.TypeInfo) ([]byte, error) {
+	switch name {
+	case "v01":
+		return gocql.Marshal(info, v.v01)
+	case "v02":
+		return gocql.Marshal(info, v.v02)
+	case "v03":
+		return gocql.Marshal(info, v.v03)
+	case "v04":
+		return gocql.Marshal(info, v.v04)
+	case "v05":
+		return gocql.Marshal(info, v.v05)
+	case "v06":
+		return gocql.Marshal(info, v.v06)
+	case "v07":
+		return gocql.Marshal(info, v.v07)
+	case "v08":
+		return gocql.Marshal(info, v.v08)
+	case "v09":
+		return gocql.Marshal(info, v.v09)
+	case "v10":
+		return gocql.Marshal(info, v.v10)
+	case "v11":
+		return gocql.Marshal(info, v.v11)
+	case "v12":
+		return gocql.Marshal(info, v.v12)
+	case "v13":
+		return gocql.Marshal(info, v.v13)
+	case "v14":
+		return gocql.Marshal(info, v.v14)
+	case "v15":
+		return gocql.Marshal(info, v.v15)
+	case "v16":
+		return gocql.Marshal(info, v.v16)
+	case "v17":
+		return gocql.Marshal(info, v.v17)
+	case "v18":
+		return gocql.Marshal(info, v.v18)
+	case "v19":
+		return gocql.Marshal(info, v.v19)
+	case "v20":
+		return gocql.Marshal(info, v.v20)
+	case "v21":
+		return gocql.Marshal(info, v.v21)
+	case "v22":
+		return gocql.Marshal(info, v.v22)
+	case "v23":
+		return gocql.Marshal(info, v.v23)
+	case "v24":
+		return gocql.Marshal(info, v.v24)
+	case "v25":
+		return gocql.Marshal(info, v.v25)
+	case "v26":
+		return gocql.Marshal(info, v.v26)
+	case "v27":
+		return gocql.Marshal(info, v.v27)
+	case "v28":
+		return gocql.Marshal(info, v.v28)
+	case "v29":
+		return gocql.Marshal(info, v.v29)
+	case "v30":
+		return gocql.Marshal(info, v.v30)
+	case "v31":
+		return gocql.Marshal(info, v.v31)
+	case "v32":
+		return gocql.Marshal(info, v.v32)
+	case "v33":
+		return gocql.Marshal(info, v.v33)
+	case "v34":
+		return gocql.Marshal(info, v.v34)
+	case "v35":
+		return gocql.Marshal(info, v.v35)
+	case "v36":
+		return gocql.Marshal(info, v.v36)
+	case "v37":
+		return gocql.Marshal(info, v.v37)
+	case "v38":
+		return gocql.Marshal(info, v.v38)
+	case "v39":
+		return gocql.Marshal(info, v.v39)
+	case "v40":
+		return gocql.Marshal(info, v.v40)
+	case "v41":
+		return gocql.Marshal(info, v.v41)
+	case "v42":
+		return gocql.Marshal(info, v.v42)
+	case "v43":
+		return gocql.Marshal(info, v.v43)
+	case "v44":
+		return gocql.Marshal(info, v.v44)
+	case "v45":
+		return gocql.Marshal(info, v.v45)
+	case "v46":
+		return gocql.Marshal(info, v.v46)
+	case "v47":
+		return gocql.Marshal(info, v.v47)
+	case "v48":
+		return gocql.Marshal(info, v.v48)
+	case "v49":
+		return gocql.Marshal(info, v.v49)
+	case "v50":
+		return gocql.Marshal(info, v.v50)
+	default:
+		return nil, fmt.Errorf("unknown column for valueType50: %q", name)
+	}
+}
+
+func (v *valueType50) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte) error {
+	switch name {
+	case "v01":
+		return gocql.Unmarshal(info, data, &v.v01)
+	case "v02":
+		return gocql.Unmarshal(info, data, &v.v02)
+	case "v03":
+		return gocql.Unmarshal(info, data, &v.v03)
+	case "v04":
+		return gocql.Unmarshal(info, data, &v.v04)
+	case "v05":
+		return gocql.Unmarshal(info, data, &v.v05)
+	case "v06":
+		return gocql.Unmarshal(info, data, &v.v06)
+	case "v07":
+		return gocql.Unmarshal(info, data, &v.v07)
+	case "v08":
+		return gocql.Unmarshal(info, data, &v.v08)
+	case "v09":
+		return gocql.Unmarshal(info, data, &v.v09)
+	case "v10":
+		return gocql.Unmarshal(info, data, &v.v10)
+	case "v11":
+		return gocql.Unmarshal(info, data, &v.v11)
+	case "v12":
+		return gocql.Unmarshal(info, data, &v.v12)
+	case "v13":
+		return gocql.Unmarshal(info, data, &v.v13)
+	case "v14":
+		return gocql.Unmarshal(info, data, &v.v14)
+	case "v15":
+		return gocql.Unmarshal(info, data, &v.v15)
+	case "v16":
+		return gocql.Unmarshal(info, data, &v.v16)
+	case "v17":
+		return gocql.Unmarshal(info, data, &v.v17)
+	case "v18":
+		return gocql.Unmarshal(info, data, &v.v18)
+	case "v19":
+		return gocql.Unmarshal(info, data, &v.v19)
+	case "v20":
+		return gocql.Unmarshal(info, data, &v.v20)
+	case "v21":
+		return gocql.Unmarshal(info, data, &v.v21)
+	case "v22":
+		return gocql.Unmarshal(info, data, &v.v22)
+	case "v23":
+		return gocql.Unmarshal(info, data, &v.v23)
+	case "v24":
+		return gocql.Unmarshal(info, data, &v.v24)
+	case "v25":
+		return gocql.Unmarshal(info, data, &v.v25)
+	case "v26":
+		return gocql.Unmarshal(info, data, &v.v26)
+	case "v27":
+		return gocql.Unmarshal(info, data, &v.v27)
+	case "v28":
+		return gocql.Unmarshal(info, data, &v.v28)
+	case "v29":
+		return gocql.Unmarshal(info, data, &v.v29)
+	case "v30":
+		return gocql.Unmarshal(info, data, &v.v30)
+	case "v31":
+		return gocql.Unmarshal(info, data, &v.v31)
+	case "v32":
+		return gocql.Unmarshal(info, data, &v.v32)
+	case "v33":
+		return gocql.Unmarshal(info, data, &v.v33)
+	case "v34":
+		return gocql.Unmarshal(info, data, &v.v34)
+	case "v35":
+		return gocql.Unmarshal(info, data, &v.v35)
+	case "v36":
+		return gocql.Unmarshal(info, data, &v.v36)
+	case "v37":
+		return gocql.Unmarshal(info, data, &v.v37)
+	case "v38":
+		return gocql.Unmarshal(info, data, &v.v38)
+	case "v39":
+		return gocql.Unmarshal(info, data, &v.v39)
+	case "v40":
+		return gocql.Unmarshal(info, data, &v.v40)
+	case "v41":
+		return gocql.Unmarshal(info, data, &v.v41)
+	case "v42":
+		return gocql.Unmarshal(info, data, &v.v42)
+	case "v43":
+		return gocql.Unmarshal(info, data, &v.v43)
+	case "v44":
+		return gocql.Unmarshal(info, data, &v.v44)
+	case "v45":
+		return gocql.Unmarshal(info, data, &v.v45)
+	case "v46":
+		return gocql.Unmarshal(info, data, &v.v46)
+	case "v47":
+		return gocql.Unmarshal(info, data, &v.v47)
+	case "v48":
+		return gocql.Unmarshal(info, data, &v.v48)
+	case "v49":
+		return gocql.Unmarshal(info, data, &v.v49)
+	case "v50":
+		return gocql.Unmarshal(info, data, &v.v50)
+	default:
+		return fmt.Errorf("unknown column for valueType50: %q", name)
+	}
+}
+
 
 type RateLimiter interface {
 	Wait()
